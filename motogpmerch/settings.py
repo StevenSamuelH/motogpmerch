@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'main',
     'bukti',
     'review',
+    'daftar_penjual',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,11 @@
-import daftar_penjual.urls as dp
-"""motogpmerch URL Configuration
+from django.http import HttpResponse
+from .views import index
+
+# from daftar_penjual.views import index as index_dp
+"""tk1pbp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,14 +18,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
-import bukti.urls as bukti
-import review.urls as review
+from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('bukti-pembayaran/', include(bukti)),
-    path('review/', include(review)),
-    path('daftar-penjual/', include(dp)),
+    path('', index, name='index'),
 ]
