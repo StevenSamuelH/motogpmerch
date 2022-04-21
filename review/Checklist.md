@@ -34,4 +34,4 @@
    3. [X] Customize HTML and CSS in `review_produk.html` template with your own imagination and style.
    4. [X] Create file `review/urls.py` with route `''` for `index` path so that you can access the result by accessing [http://localhost:8000/review](http://localhost:8000/review).
 
-6. [] Access all the endpoint that you have built in this lab using Web Browser.
+6. [X] Access all the endpoint that you have built in this lab using Web Browser.
