@@ -1,0 +1,36 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    background-color: #285ed4;
+    color: white;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    background-color: rgb(224, 135, 19);
+}
+
+img {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.button {
+    background-color: #285ed4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
