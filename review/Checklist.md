@@ -24,8 +24,8 @@
               gambar = models.ImageField(upload_to='motogpmerch-images')
       ```
 
-   2. [] Register your model on `review/admin.py` so you can access your database from Django Admin. Don't forget to run migration.
-   3. [] Add `ReviewProduk` information via Django Admin (see: <https://docs.djangoproject.com/en/3.2/intro/tutorial02/>).
+   2. [X] Register your model on `review/admin.py` so you can access your database from Django Admin. Don't forget to run migration.
+   3. [X] Add `ReviewProduk` information via Django Admin (see: <https://docs.djangoproject.com/en/3.2/intro/tutorial02/>).
 
 5. Show page to list created `ReviewProduk` with table format:
 

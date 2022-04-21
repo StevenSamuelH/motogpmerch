@@ -3,27 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <title>Review Produk</title>
-    <link href="review_produk_style.css" rel="stylesheet">
+    <style>
+      body {
+          background-color: antiquewhite;
+      }
+
+      h1 {
+          background-color: #285ed4;
+          color: white;
+      }
+
+      table, tr, td {
+          border: 1px solid black;
+          text-align: center;
+          padding: 8px;
+          background-color: rgb(224, 135, 19);
+      }
+
+      img {
+          border: 1px solid white;
+          border-radius: 4px;
+          padding: 5px;
+          width: 150px;
+          height: 150px;
+      }
+
+      .button {
+          background-color: #285ed4;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          margin: 3px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <h1>Review Produk</h1> 
     <table>
       <tr>
         <th>Nama</th>
-        <th>Kondisi</th>
-        <th>Rating</th>
-        <th>Tanggal Penjualan</th>
-        <th>Review</th>
         <th>Gambar</th>
+        <th>Review</th>
+        <th>Rating</th>
       </tr>
       {% for produk in index %}
       <tr>
         <td>{{produk.nama}}</td>
-        <td>{{produk.kondisi}}</td>
-        <td>{{produk.rating}}</td>
-        <td>{{produk.tanggal_penjualan}}</td>
-        <td>{{produk.review}}</td>
         <td><img src="{{produk.gambar.url}}"></td>
+        <td>{{produk.review}}</td>
+        <td><img src="{{produk.rating.url}}"></td>
       </tr>
       {% endfor %}
     </table>

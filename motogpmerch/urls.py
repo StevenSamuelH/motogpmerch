@@ -18,11 +18,15 @@ from django.contrib import admin
 from django.urls import include, path
 import bukti.urls as bukti
 import review.urls as review
+from django.conf.urls.static import static
+from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('bukti-pembayaran/', include(bukti)),
-    path('review/', include(review)),
+    path('review-produk/', include(review)),
     path('daftar-penjual/', include(dp)),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
