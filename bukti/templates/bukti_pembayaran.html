@@ -1,35 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    form{
-      border: 2px solid #000080;
-      text-align: center;
-      padding: 5px;
-      width: fit-content;
-    }
-
-    p{
-      text-align: center;
-      align-items: center;
-    }
-</style>
+    <style>
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        form { 
+            margin: 0 auto; 
+            width: 600px;
+            align-items: center;
+            padding: 5px;
+        }
+        #tombol{
+            text-align: center;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Film</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Pembayaran</title>
 </head>
+
 <body>
-    <h1 align = "center">Tambah Film</h1>
+    <!-- Bootstrap CSS -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Moto_Gp_logo.svg/1200px-Moto_Gp_logo.svg.png" width="60" height="30"/>
+            motogpmerch</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div 
+            class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/daftar-penjual/">Penjual</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profilproduk/collections">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bukti-pembayaran/">Pembayaran</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/review-produk/">Review</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+    {% load crispy_forms_tags %}
+    <h1>Bukti Pembayaran</h1>
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Submit</button>
+        {{form.nama | as_crispy_field}}
+        <div class="form-row">
+            <div class="form-group col-md-8 mb-0">
+              {{ form.alamat|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-4 mb-0">
+              {{ form.kota|as_crispy_field }}
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+              {{ form.kelurahan|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-2 mb-0">
+              {{ form.kodepos|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-4 mb-0">
+                {{ form.bukti_img|as_crispy_field }}
+            </div>
+        </div>
+
+        <div id = 'tombol'>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
-    <p>
-        <a href="">Lihat Keranjang</a>
-        ||
-        <a href="">Lihat Merchandise Lainnya</a>
-    </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

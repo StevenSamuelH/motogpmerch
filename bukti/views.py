@@ -5,7 +5,7 @@ from .forms import DataPembeliForm
 
 # Create your views here.
 def add_data(request):
-    data_pembeli = DataPembeliForm(request.POST, request.FILES)
+    data_pembeli = DataPembeliForm(request.POST or None, request.FILES or None)
     if request.method == "POST":
         if data_pembeli.is_valid():
             data_pembeli.save()
