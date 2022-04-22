@@ -9,6 +9,9 @@ class DataPembeliForm(forms.ModelForm):
         # Ganti label
         labels = {
             'nama' : _('Nama Pembeli'),
-            'alamat' : _('Alamat Pembeli'),
+            'alamat' : _('Alamat'),
+            'kota' : _('Kota'),
+            'kelurahan' : _('Kelurahan - Kecamatan'),
+            'kodepos' : _('Kode Pos'),
             'bukti_img' : _('Upload Bukti Pembayaran'),
         }
