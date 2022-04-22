@@ -11,6 +11,35 @@
     <title>daftar-produk</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Moto_Gp_logo.svg/1200px-Moto_Gp_logo.svg.png" width="60" height="30"/>
+          motogpmerch</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div 
+          class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/daftar-penjual/">Penjual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profilproduk/collections">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bukti-pembayaran/">Pembayaran</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/review-produk/">Review</a>
+            </li>
+        </div>
+      </div>
+    </nav>
     <th>Daftar Produk</th>
     <table>
         <thead>
@@ -22,7 +51,7 @@
       {% for product in products %}
       <tr>
         <td>{{product.name}}</td>
-        <td>{{<a href="/review/"></a>}}</td>
+        <td><a href="/review-produk/"></a></td>
       </tr>
       {% endfor %}
     </table>

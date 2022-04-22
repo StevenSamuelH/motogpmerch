@@ -12,4 +12,4 @@ def produk(request):
     product = Product.objects.all()
     review = ReviewProduk.objects.all()
     response = {'products' : product}
-    return render(request, 'daftar_produk.html', response)
+    return render(request, 'main/daftar_produk.html', response)
