@@ -28,7 +28,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('profil-produk/', include(profil_produk)),
+    path('profilproduk/', include(profil_produk)),
     path('bukti-pembayaran/', include(bukti)),
     path('review-produk/', include(review)),
     path('daftar-penjual/', include(dp)),
@@ -36,5 +36,3 @@ urlpatterns = [
 
 if settings.DEBUG :
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
