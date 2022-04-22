@@ -9,5 +9,6 @@ def add_data(request):
     if request.method == "POST":
         if data_pembeli.is_valid():
             data_pembeli.save()
+            return HttpResponseRedirect('https://motogpmerch.herokuapp.com/')
     response = {'form' : data_pembeli}
     return render(request, 'bukti_pembayaran.html', response)
