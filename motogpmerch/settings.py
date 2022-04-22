@@ -56,13 +56,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-<<<<<<< HEAD
     'profil_produk',
-=======
     'bukti',
     'review',
     'daftar_penjual',
->>>>>>> 8f6b603e7aaf586ff1fa56b1372cd3905f11d053
 ]
 
 MIDDLEWARE = [
@@ -176,13 +173,9 @@ for directory in [*STATICFILES_DIRS, STATIC_ROOT]:
 # You can remove this if it causes problems on your setup.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-<<<<<<< HEAD
-
-=======
 MEDIA_ROOT = (
 BASE_DIR
 )
 
 
 MEDIA_URL = '/media/'
->>>>>>> 8f6b603e7aaf586ff1fa56b1372cd3905f11d053

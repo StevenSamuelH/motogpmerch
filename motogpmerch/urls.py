@@ -16,33 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-<<<<<<< HEAD
 import profil_produk.urls as profil_produk
 
 from django.conf import settings
 from django.conf.urls.static import static
-=======
 import bukti.urls as bukti
 import review.urls as review
-from django.conf.urls.static import static
 from . import settings
->>>>>>> 8f6b603e7aaf586ff1fa56b1372cd3905f11d053
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-<<<<<<< HEAD
     path('profilproduk/', include(profil_produk)),
-    
-]
-
-if settings.DEBUG :
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
     path('bukti-pembayaran/', include(bukti)),
     path('review-produk/', include(review)),
     path('daftar-penjual/', include(dp)),
+    
 ]
 
+
+  
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> 8f6b603e7aaf586ff1fa56b1372cd3905f11d053

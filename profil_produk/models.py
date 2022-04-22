@@ -45,7 +45,7 @@ class Product(models. Model):
         created_at = models.DateTimeField(auto_now_add=True)
         
         def _str_(self):
-            return self.nane
+            return self.name
 
 
 # Create your models here.
