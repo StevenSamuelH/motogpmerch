@@ -62,7 +62,11 @@ INSTALLED_APPS = [
     'review',
     'daftar_penjual',
     'crispy_forms',
+    'apiproduk',
+    'rest_framework',
 ]
+
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
