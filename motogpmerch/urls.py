@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 import bukti.urls as bukti
 import review.urls as review
 from . import settings
+import apiproduk.urls as apiproduk
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +32,7 @@ urlpatterns = [
     path('bukti-pembayaran/', include(bukti)),
     path('review-produk/', include(review)),
     path('daftar-penjual/', include(dp)),
+    path('apiproduk/', include(apiproduk)),
     
 ]
 
