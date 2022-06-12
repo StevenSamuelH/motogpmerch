@@ -1,4 +1,8 @@
 from django.shortcuts import render
+
+# Create your views here.
+
+from django.shortcuts import render
 from .models import Product
 from .serializers import ProductSerializer
 from rest_framework.generics import ListAPIView
@@ -37,4 +41,5 @@ def daftarDataProdukAPI(request):
 def json(request):
     data = serializers.serialize('json',Product.objects.all())
     return HttpResponse(data, content_type="application/json")
+
 
