@@ -33,7 +33,7 @@ urlpatterns = [
     path('review-produk/', include(review)),
     path('daftar-penjual/', include(dp)),
     path('apiproduk/', include(apiproduk)),
-    
+    path('apipembeli/', include(bukti))
 ]
 
 
