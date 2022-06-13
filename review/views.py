@@ -20,10 +20,10 @@ def json(request):
 def addReviewProduk(request):
 
     data = j.loads(request.body)
-    nama_baru = data['namaProduk']
-    gambar_baru = data['gambarProduk']
-    review_baru = data['reviewProduk']
-    rating_baru = data['ratingProduk']
+    nama_baru = data['nama']
+    gambar_baru = data['gambar']
+    review_baru = data['review']
+    rating_baru = data['rating']
   
     
     Dataproduk = ReviewProduk(nama=nama_baru,
