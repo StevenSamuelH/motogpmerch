@@ -8,4 +8,4 @@ class DataPembeli(models.Model):
     kota = models.CharField( max_length=50)
     kelurahan = models.CharField( max_length=100)
     kodepos = models.CharField( max_length=10)
-    bukti_img = models.ImageField(upload_to = 'bukti-pembayaran')
+    bukti_img = models.URLField()
